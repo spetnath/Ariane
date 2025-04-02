@@ -1,0 +1,93 @@
+body {
+	background-color : black;
+	}
+	h1{
+	text-align: center;
+	font-size: 5em;
+	color: red;
+	text-decoration: underline;
+}
+
+/* Style du menu */
+nav {
+    background: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+    transition: background 0.5s ease-in-out; /* Animation fluide */
+}
+
+/* Liste du menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Liens du menu */
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Effet sous-lignement animé */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: red;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Changement de couleur au survol */
+nav ul li a:hover {
+    color: red;
+}
+
+/*icone profil*/
+nav ul li a i {
+    margin-right: 8px; /* Espace entre l'icône et le texte */
+    font-size: 1.2em; /* Taille de l'icône */
+    vertical-align: middle;
+}
+
+.rectangle-blanc {
+    width: 500px;  /* Largeur du rectangle */
+    height: 300px; /* Hauteur du rectangle */
+    background-color: white; /* Fond blanc */
+    position: fixed; /* Fixe le rectangle par rapport à la fenêtre */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centre en largeur et hauteur */
+    padding: 20px; 
+    border-radius: 10px; /* Coins arrondis */
+    text-align: center;
+    display: flex;
+}
+.rectangle-blanc p {
+    font-size: 1.2em;
+    color: black;
+}
